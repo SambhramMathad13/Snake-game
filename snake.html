@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body
+        {
+            background: #4d4848;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #board
+        {
+            background: #252525;
+            /* display: flex;
+            align-items: center;
+            justify-content: center; */
+            width: 70vw;
+            height: 90vh;
+            display: grid;
+            grid-template-columns:repeat(20,1fr);
+            grid-template-rows:repeat(20,1fr);
+        }
+        .head
+        {
+            background: #ff6363;
+            border: .25vh solid black;
+            border-radius: .95vh;
+        }
+        .snake
+        {
+            background-color: #ffa7a7;
+            border: .25vh solid black;
+            border-radius: .75vh;
+        }
+        .food
+        {
+            background-color: #6be462;
+            border: .25vh solid black;
+            border-radius: .75vh;
+        }
+        .score
+        {
+            background: #a39f9f;
+            z-index: 3;
+            height: 10vw;
+            width: 10vw;
+            margin-left: 8vh;
+            text-align: center;
+            font-size:40px;
+            margin-top: 5vh;
+        }
+        .diff
+        {
+            background: #a39f9f;
+            z-index: 3;
+            height: 23vw;
+            width: 10vw;
+            margin-left: 8vh;
+            text-align: center;
+            font-size:35px;
+            margin-top: 5vh;
+
+        }
+        #w
+        {
+            text-align: center;
+            font-size:70px;
+            padding: 2vh;
+        }
+        #e{
+            background: #4aa136;
+            padding:3px;
+            font-size:35px;
+            margin-top: 3vh;
+            margin-bottom: 1vh;
+            border-bottom: #252525;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div id="board"></div>
+    <div class="b">
+    <div class="score">Score
+        <div id="w"></div>
+    </div>
+    <div class="diff">Difficulty
+        <button id="e" onclick="e()">Easy</button>
+        <button id="e" onclick="m()">Medium</button>
+        <button id="e" onclick="d()">Hard</button>
+
+    </div>
+</div>
+</body>
+<script src="snake.js"></script>
+</html>
